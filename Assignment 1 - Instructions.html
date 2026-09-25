@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/Athabasca_Template_2021/Template_Files/sample_pages/../../_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/Athabasca_Template_2021/Template_Files/sample_pages/../../_assets/thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/Athabasca_Template_2021/Template_Files/sample_pages/../../_assets/css/styles.min.css">
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/Athabasca_Template_2021/Template_Files/sample_pages/../../_assets/css/custom.css">
+    <title>Assignment 1</title>
+</head><body><div class="container-fluid">
+<div class="row">
+<div class="offset-sm-1 col-sm-10">
+<div class="jumbotron">
+<p>This page includes instructions for Assignment 1 and a link (below the instructions) to submit the assignment for assessment.</p>
+</div>
+<h2>Assignment 1: Basic Programming Problems</h2>
+<p><strong>Due:</strong> After Unit 4<br><strong>Weight:</strong> 15% of your final grade</p>
+<h3>Instructions</h3>
+<p>Refer to <a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=24055&amp;type=content&amp;rcode=1016B7DC-1AE1-44D6-994A-A790405445BA-225699" target="_blank" rel="noopener">Java Compiler and IDEs</a> in the Course Orientation for the software you require for Java programming in this course. Install it now.</p>
+<p>Before you begin working on the problems, read <a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=24055&amp;type=content&amp;rcode=1016B7DC-1AE1-44D6-994A-A790405445BA-225709" target="_blank" rel="noopener">Assignments and Final Project</a> in the Course Orientation. Ensure you address all the requirements and deliverables for this assignment, including program requirements, test plans, and the assignment reflection component.</p>
+<p>Your assignment submission must include the following deliverables:</p>
+<ul>
+<li>Java source code (.java files) for a complete and working program that fulfills the requirements of the five problems in this assignment</li>
+<li>Full documentation for your primary Java source code file</li>
+<li>Separate test plans for each problem, compiled into a single PDF or .docx file</li>
+<li>Your assignment reflection, submitted as a PDF or .docx file</li>
+</ul>
+<div class="card card-graphic">
+<div class="card-body">
+<div class="callout-icon callout-icon-info"></div>
+<div class="card-text">
+<p>A significant number of marks is attributed to your documentation and test plans. Be sure to include all deliverables with your assignment. Refer to <a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=24055&amp;type=content&amp;rcode=1016B7DC-1AE1-44D6-994A-A790405445BA-225709" target="_blank" rel="noopener">Assignments and Final Project</a> for the assignment marking scheme.</p>
+</div>
+</div>
+</div>
+<h3>Problems</h3>
+<h4>Problem 1</h4>
+<p>Programming is useful in many ways. One of the original reasons for creating what eventually became the modern computer was the need for tables of data. Charles Babbage created the analytical engine specifically to tabulate—make tables of—polynomial functions. Many mathematical functions, such as logarithms and trigonometric functions, can be approximated by polynomial functions.</p>
+<p>At this point, you will not create anything so complex. Instead, your mission is to create a Java program that will generate a multiplication table. Start with the 1× table, followed by 2×, then 3×, and so on, until you have generated a table from 1× to 12×. An example output would display as follows:</p>
+<p><img src="MultiplicationTable.png" alt="Multiplication Table from 1× to 12×" title="Multiplication Table from 1× to 12×" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></p>
+<pre class="pre_comp"></pre>
+<p>Make use of nested loops and use spaces and vertical bars (|) to form a table similar to the one above.</p>
+<p>Note that this program does not require any user input when it runs. The test plan is quite simple: does the output from your program match the output provided in this problem? If not, adjust your code until your output matches the output provided above.</p>
+<p>Be sure to document all your code changes and observations in your assignment reflection.</p>
+<p><strong>Hint:</strong> Use <code class="code_comp">if-else</code> control structures to test if a number is 1–9, 10–99, or over 100. This will allow you to determine how many spaces to insert before each tabulated number so it lines up with the others.</p>
+<h4>Problem 2</h4>
+<p>Here is a classic “introduction to computer programming” problem:</p>
+<p>Write a program that converts temperature from Fahrenheit to Celsius and vice versa.</p>
+<p>The program will accept a number (temperature) and a temperature unit designation (i.e., character <code class="code_comp">F</code> or <code class="code_comp">C</code>) from the user, and then convert the temperature into the other unit system. The program will echo the input as part of the final conversion output. The temperature units should be printed in full (<code class="code_comp">Fahrenheit</code> or <code class="code_comp">Celsius</code>). Your program should use real numbers—not integers—for both input and output.</p>
+<p>Formula:</p>
+<code class="code_comp">
+T(F) = (T(C) * 9 / 5) + 32<br>T(C) = (T(F) − 32) * 5 / 9</code>
+<p style="margin-top: 1rem;">Sample run:</p>
+<code class="code_comp">
+This program converts temperatures from Fahrenheit to Celsius and vice versa.<br>
+Please enter your temperature: 32<br>
+Please enter the units (F/C): F<br><br>
+
+A temperature of 32 degrees Fahrenheit is equivalent to 0 degrees Celsius.<br>
+Do you wish another conversion? (Y/N): Y<br><br>
+
+Please enter your temperature: 100<br>
+Please enter the units (F/C): C<br><br>
+
+A temperature of 100 degrees Celsius is equivalent to 212 degrees Fahrenheit.<br>
+Do you wish another conversion? (Y/N): N<br><br>
+
+Thank you. Goodbye.
+</code>
+<p style="margin-top: 1rem;">Note that you have been given the required output format and input queries to use in your program. Also note that you have been provided with two sample data points to use in your own test plan.</p>
+<p>Be sure to document all your code changes and observations in your assignment reflection.</p>
+<p>Hints:</p>
+<ul>
+<li>There is no reason to accept only capital letters for <code class="code_comp">F</code>, <code class="code_comp">C</code>, <code class="code_comp">Y</code>, or <code class="code_comp">N</code>.</li>
+<li>You should be able to accept either uppercase or lowercase letters.You can exit the program either when an explicit <code class="code_comp">N</code> or <code class="code_comp">n</code> is read or, alternatively, when anything except an explicit <code class="code_comp">Y</code> or <code class="code_comp">y</code> is input. The choice is yours.</li>
+</ul>
+<h4>Problem 3</h4>
+<p>This problem is another table creation program, similar to Problem 1. In this program, you will create a table of temperature conversions, starting from −40 degrees (both Fahrenheit and Celsius) and running at 5-degree intervals for 100 entries in each table.</p>
+<p>The program should use static methods to perform the actual conversion so you can print the input temperatures and converted temperatures using a single&nbsp;<code class="code_comp">System.out</code> statement. You will need two methods: one to convert F to C, and one to convert C to F.</p>
+<p>The decimal temperatures should be displayed using 10 spaces per temperature, with three digits shown after the decimal point.</p>
+<p>As with Problem 1, this program does not require any user input when it runs. The test plan is simple: does the output from your program match the output provided in this problem? If not, you will have to adjust your code until your output matches the output provided below.</p>
+<p>Be sure to document all your code changes and observations in your assignment reflection, which will accompany your assignment source code submission.</p>
+<p><strong>Hint:</strong> Look up <code class="code_comp">System.out.format</code> for examples of displaying formatted numerical output. You should be able to print each row of the above table using a single <code class="code_comp">System.out.format</code> statement.</p>
+<p>The tabular output from your program should display as follows:</p>
+<pre class="pre_comp">            
+        Temperature Conversion Tables
+
+     Temperature      |       Temperature
+      (degrees)       |        (degrees)
+    F           C     |      C           F
+ −40.000     −40.000  |    −40.000     −40.000
+ −35.000     −37.222  |    −35.000     −31.000
+ −30.000     −34.444  |    −30.000     −22.000
+ −25.000     −31.667  |    −25.000     −13.000
+ −20.000     −28.889  |    −20.000      −4.000
+ −15.000     −26.111  |    −15.000       5.000
+ −10.000     −23.333  |    −10.000      14.000
+  −5.000     −20.556  |     −5.000      23.000
+   0.000     −17.778  |      0.000      32.000
+   5.000     −15.000  |      5.000      41.000
+  10.000     −12.222  |     10.000      50.000
+  15.000      −9.444  |     15.000      59.000
+  20.000      −6.667  |     20.000      68.000
+  25.000      −3.889  |     25.000      77.000
+  30.000      −1.111  |     30.000      86.000
+  35.000       1.667  |     35.000      95.000
+  40.000       4.444  |     40.000     104.000
+  45.000       7.222  |     45.000     113.000
+  50.000      10.000  |     50.000     122.000
+  55.000      12.778  |     55.000     131.000
+  60.000      15.556  |     60.000     140.000
+  65.000      18.333  |     65.000     149.000
+  70.000      21.111  |     70.000     158.000
+  75.000      23.889  |     75.000     167.000
+  80.000      26.667  |     80.000     176.000
+  85.000      29.444  |     85.000     185.000
+  90.000      32.222  |     90.000     194.000
+  95.000      35.000  |     95.000     203.000
+ 100.000      37.778  |    100.000     212.000
+ 105.000      40.556  |    105.000     221.000
+ 110.000      43.333  |    110.000     230.000
+ 115.000      46.111  |    115.000     239.000
+ 120.000      48.889  |    120.000     248.000
+ 125.000      51.667  |    125.000     257.000
+ 130.000      54.444  |    130.000     266.000
+ 135.000      57.222  |    135.000     275.000
+ 140.000      60.000  |    140.000     284.000
+ 145.000      62.778  |    145.000     293.000
+ 150.000      65.556  |    150.000     302.000
+ 155.000      68.333  |    155.000     311.000
+ 160.000      71.111  |    160.000     320.000
+ 165.000      73.889  |    165.000     329.000
+ 170.000      76.667  |    170.000     338.000
+ 175.000      79.444  |    175.000     347.000
+ 180.000      82.222  |    180.000     356.000
+ 185.000      85.000  |    185.000     365.000
+ 190.000      87.778  |    190.000     374.000
+ 195.000      90.556  |    195.000     383.000
+ 200.000      93.333  |    200.000     392.000
+ 205.000      96.111  |    205.000     401.000
+ 210.000      98.889  |    210.000     410.000
+ 215.000     101.667  |    215.000     419.000
+ 220.000     104.444  |    220.000     428.000
+ 225.000     107.222  |    225.000     437.000
+ 230.000     110.000  |    230.000     446.000
+ 235.000     112.778  |    235.000     455.000
+ 240.000     115.556  |    240.000     464.000
+ 245.000     118.333  |    245.000     473.000
+ 250.000     121.111  |    250.000     482.000
+ 255.000     123.889  |    255.000     491.000
+ 260.000     126.667  |    260.000     500.000
+ 265.000     129.444  |    265.000     509.000
+ 270.000     132.222  |    270.000     518.000
+ 275.000     135.000  |    275.000     527.000
+ 280.000     137.778  |    280.000     536.000
+ 285.000     140.556  |    285.000     545.000
+ 290.000     143.333  |    290.000     554.000
+ 295.000     146.111  |    295.000     563.000
+ 300.000     148.889  |    300.000     572.000
+ 305.000     151.667  |    305.000     581.000
+ 310.000     154.444  |    310.000     590.000
+ 315.000     157.222  |    315.000     599.000
+ 320.000     160.000  |    320.000     608.000
+ 325.000     162.778  |    325.000     617.000
+ 330.000     165.556  |    330.000     626.000
+ 335.000     168.333  |    335.000     635.000
+ 340.000     171.111  |    340.000     644.000
+ 345.000     173.889  |    345.000     653.000
+ 350.000     176.667  |    350.000     662.000
+ 355.000     179.444  |    355.000     671.000
+ 360.000     182.222  |    360.000     680.000
+ 365.000     185.000  |    365.000     689.000
+ 370.000     187.778  |    370.000     698.000
+ 375.000     190.556  |    375.000     707.000
+ 380.000     193.333  |    380.000     716.000
+ 385.000     196.111  |    385.000     725.000
+ 390.000     198.889  |    390.000     734.000
+ 395.000     201.667  |    395.000     743.000
+ 400.000     204.444  |    400.000     752.000
+ 405.000     207.222  |    405.000     761.000
+ 410.000     210.000  |    410.000     770.000
+ 415.000     212.778  |    415.000     779.000
+ 420.000     215.556  |    420.000     788.000
+ 425.000     218.333  |    425.000     797.000
+ 430.000     221.111  |    430.000     806.000
+ 435.000     223.889  |    435.000     815.000
+ 440.000     226.667  |    440.000     824.000
+ 445.000     229.444  |    445.000     833.000
+ 450.000     232.222  |    450.000     842.000
+ 455.000     235.000  |    455.000     851.000
+</pre>
+<h4>Problem 4</h4>
+<p>This next program is a little simpler, but it still illustrates some critical program structures. It also demonstrates an idea that is still used commonly, even if the mechanism has evolved with modern tools and alternative languages: the <em>menu-based help system</em>. Modern help systems and menus are often represented using an integrated user environment; however, the core concepts behind the help system remain largely unchanged.</p>
+<p>Create an interactive help system for Java programming. The system will incorporate a menu system that interacts with the user, and the appropriate help topic will be displayed based on an input selection.</p>
+<p>This program will require some research on your part and some programming in Java. Specifically, you will need to find definitions for the Java terms included in your help system. You can read the textbook or search the Internet for the definitions. They should be no more than a few sentences each; nothing complex or detailed is required.</p>
+<p>The program must include a <strong>looping structure</strong> to both receive user input and process it until the user wishes to quit. Use a <strong>switch structure</strong> to handle the input and display the appropriate help definition.</p>
+<p>Your program must include help for the following Java terms:</p>
+<ul>
+<li>if</li>
+<li>switch</li>
+<li>for</li>
+<li>while</li>
+<li>do–while</li>
+</ul>
+<p>Here is a sample output from the program:</p>
+<pre class="pre_comp">Java Help Menu
+Select help on:
+1. if
+2. switch
+3. for
+4. while
+5. do-while
+x. exit
+
+Selection: 3
+
+for: ...definition...
+
+Java Help Menu
+Select help on: 
+1. if
+2. switch
+3. for
+4. while
+5. do-while
+x. exit
+
+Selection: x 
+
+Thank you. Goodbye.
+</pre>
+<h4>Problem 5</h4>
+<p>Finally, a classic programming problem:</p>
+<p>Write a program that uses two nested <code class="code_comp">for</code> loops and the modulus operator (%) to detect and print all prime numbers from 1 to 10,000. Prime numbers are integral numbers that are only evenly divisible by themselves and 1. Display all the prime numbers found.</p>
+<div class="card card-graphic">
+<div class="card-body">
+<div class="callout-icon callout-icon-info"></div>
+<div class="card-text">
+<h3>Submission Instructions</h3>
+<p>Submit your completed assignment to <a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=24055&amp;type=dropbox&amp;rcode=9c67f8820788426da7c1f836-5" target="_top" rel="noopener">Assignment 1</a> for assessment (submission link will be available upon your course contract start date).</p>
+<h4>Important</h4>
+<ol>
+<li>
+<p>Once you submit the assignment for grading, your submission is final. To resubmit the assignment, you&nbsp;<strong>must</strong>&nbsp;obtain special permission from your instructor.</p>
+</li>
+<li>
+<p>Please name your file using the following template:<br><code>&lt;course shortname&gt;_&lt;assignment#&gt;_&lt;lastname&gt;&lt;firstname&gt;_&lt;studentID&gt;</code></p>
+<p>Examples:</p>
+<ul style="list-style-type: none;">
+<li>ABCD123_Assignment1_DoeJane_1234567</li>
+<li>ABCD123_Assignment1_file1_DoeJane_1234567</li>
+<li>ABCD123_FinalAssignment_DoeJane_1234567</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12"><footer><!-- <p>© [Client] [Year]</p> --> <!-- <p><img src="/shared/LCS_HTML_Templates/Athabasca_Template_2021/_assets/img/logo.png" alt="logo"></p> --></footer></div>
+</div>
+<p>
+<script src="/shared/LCS_HTML_Templates/Athabasca_Template_2021/Template_Files/sample_pages/../../_assets/thirdpartylib/jquery/jquery-3.4.1.min.js">
+        </script>
+<script src="/shared/LCS_HTML_Templates/Athabasca_Template_2021/Template_Files/sample_pages/../../_assets/thirdpartylib/popper-js/popper.min.js">
+        </script>
+<script src="/shared/LCS_HTML_Templates/Athabasca_Template_2021/Template_Files/sample_pages/../../_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js">
+        </script>
+</p>
+<!-- Template JavaScript -->
+<p>
+<script src="/shared/LCS_HTML_Templates/Athabasca_Template_2021/Template_Files/sample_pages/../../_assets/js/scripts.min.js"></script>
+<script src="/shared/LCS_HTML_Templates/Athabasca_Template_2021/Template_Files/sample_pages/../../_assets/js/custom.js"></script>
+</p>
+</div></body></html>
