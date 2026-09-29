@@ -11,3 +11,10 @@ void main() {
         IO.println("i = " + i);
     }
 }
+for ( int row =1; row <=12; row+1){// rows
+        for( int column=1; column<=12; column+1){// columns
+int product =row * column;
+        System.out.println(product);
+    }
+}
+// I cant get it to print out a result
