@@ -1,40 +1,75 @@
+
+
+void main() {
+    IO.println(String.format("                 Multiplication table from 1 to 12    "));
+    IO.println(String.format("      |   1 |   2 |   3 |   4 |   5 |   6 |   7 |   8 |   9 |  10 |  11 |  12 |"));
+    for ( int row =1; row <=12; row++){
+        if (row / 10>= 1){// 2 digit number spacing
+            IO.print("|  " + row + " ");
+        }
+        else {// 1 digit number spacing
+            IO.print("|   " + row + " ");
+        }
+        for(int column=1; column<=12; column++){
+            int product = row * column;
+            if (product / 100>= 1){// 3 digit number spacing
+                IO.print("| " + product + " ");
+            }
+            else if (product / 10>= 1){// 2 digit number spacing
+                IO.print("|  " + product + " ");
+            }
+            else {// 1 diget number spacing
+                IO.print("|   " + product + " ");
+            }
+        }
+        IO.println("|");
+    }
+}
+
+
+
 import java.util.Scanner;
 
 void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
     Scanner scanner = new Scanner(System.in);
     String again;
     do {
-    System.out.println("This program converts temperatures from Fahrenheit to Celsius and vice versa.");
-    System.out.print("Please Enter Your Temperature: ");
-    float temp = scanner.nextFloat();
-    System.out.print("Please enter the units (F/C): ");
-    String unit = scanner.next();
-    double newTemp = 0;
-    if (unit.equalsIgnoreCase("C")){
-        newTemp = ((temp * 9 / 5) + 32);
-        System.out.println("A temperature of " + temp + " degrees Celsius is equivalent to " + newTemp + " in Fahrenheit");
-    }
-    else if (unit.equalsIgnoreCase("F")){
-        newTemp = ((temp - 32) * 5.0 / 9.0);
-        System.out.println("A temperature of " + temp + " degrees Fahrenheit is equivalent to " + newTemp + " in Celsius");
-    }
-    else {
-        System.out.println("Invalid unit entered. Please enter 'F' or 'C'.");
-    }
-    System.out.print("Do you wish another conversion? (Y/N): ");
-    again = scanner.next();
-
-    if (again.equalsIgnoreCase("y")) {
-
-    } else if (again.equalsIgnoreCase("n")) {
-
-    } else {
-        System.out.println("Invalid input. Please enter 'y' or 'n'.");
-    }
-} while(again.equalsIgnoreCase("y"));
-    if (again.equalsIgnoreCase("n")) {
-        System.out.println("Thank you. Goodbye.");
+        double newTemp = 0;
+        float validFloat = 0;
+        boolean isValid = false;
+        System.out.println("This program converts temperatures from Fahrenheit to Celsius and vice versa.");
+        System.out.print("Please Enter Your Temperature: ");
+        String temp = scanner.next();
+        do {
+            try {
+                validFloat = Float.parseFloat(temp);
+                isValid = true;
+            } catch (NumberFormatException e) {
+                System.out.print("Invalid input! '" + temp + "' is not a valid float. Please enter a float.");
+                temp = scanner.next();
+            }
+        } while (!isValid);
+        System.out.print("Please enter the units (F/C): ");
+        String unit = scanner.next();
+        do {
+            if (unit.equalsIgnoreCase("C")){
+                newTemp = ((validFloat * 9 / 5) + 32);
+                System.out.println("A temperature of " + temp + " degrees Celsius is equivalent to " + newTemp + " in Fahrenheit");
+                break;
+            }
+            if (unit.equalsIgnoreCase("F")){
+                newTemp = ((validFloat - 32) * 5.0 / 9.0);
+                System.out.println("A temperature of " + temp + " degrees Fahrenheit is equivalent to " + newTemp + " in Celsius");
+                break;
+            }
+            else {
+                System.out.print("Invalid unit entered. Please enter 'F' or 'C'.");
+                unit = scanner.next();
+            }
+        } while (!Objects.equals(unit, "F'") || !Objects.equals(unit, "C'") );
+        System.out.print("Do you wish another conversion? (Y/N): ");
+        again = scanner.next();
+    } while(again.equalsIgnoreCase("y"));
+    System.out.println("Thank you. Goodbye.");
 }
-    }
+
